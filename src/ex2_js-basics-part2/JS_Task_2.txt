@@ -1,0 +1,88 @@
+//js_task2_01
+var GetType=function (variable) {
+	if (typeof (variable) ==="string")
+		return "это строка";
+	else 
+		if (typeof (variable) ==="number")
+			return "это число";
+		else
+			return "это не строка и не число";
+}
+
+GetType("123");
+GetType(123);
+GetType(null);
+
+//js_task2_02
+var GetArray=function(arr){
+	var i;
+	for (i=0; i<arr.length; i++){
+		console.log(arr[i]);
+	}		
+	console.log("Число элементов: "+arr.length);
+}
+
+GetArray([1,2,3,4]);
+
+//js_task2_03
+var GetEvenAndOdd=function(arr){
+	var i;
+	var even=0;
+	var odd=0;
+	var zero=0;
+	for (i=0; i<arr.length; i++){
+		if (arr[i]%2===1)
+			odd++;
+		else if (arr[i]===0)
+			zero++;
+		else if (typeof arr[i]==="number")
+			even++;
+	}	
+	console.log("четных: "+even+"; нечетных: "+odd+"; нуль:"+zero);
+}
+
+GetEvenAndOdd([1,2,3,0]);
+
+//js_task2_04
+var IsElementsSame=function(arr){
+	var i;
+	for (i=1; i<arr.length; i++)
+		if (arr[i-1]!==arr[i])
+			return false;
+	return true;	
+}
+
+IsElementsSame([1,1,1]);
+
+//js_task2_05
+var GetMax=function(arr){
+	var i;
+	var max=arr[0]
+	for (i=1; i<arr.length; i++)
+		if (arr[i-1]<arr[i])
+			max=arr[i];
+	console.log("Максимальное значение: "+max);
+}
+
+GetMax([9,3,45]);
+
+//js_task2_06
+var IsSimple=function(number){
+var simleNumbers=[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79,
+	83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 
+	191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 
+	307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 
+	431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541, 547, 557, 
+	563, 569, 571, 577, 587, 593, 599, 601, 607, 613, 617, 619, 631, 641, 643, 647, 653, 659, 661, 673, 
+	677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 
+	823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941, 947, 953, 
+	967, 971, 977, 983, 991, 997];
+if (number>1000)
+	console.log("Невeрные данные.");
+else if (simleNumbers.includes(number))
+	console.log("Число "+number+" - простое число.");
+else if (typeof number==="number")
+	console.log("Число "+number+" - составное число.");
+}
+
+IsSimple(13);
