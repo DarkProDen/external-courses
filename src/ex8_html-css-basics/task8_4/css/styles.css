@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Monoton-Regular;
+    src: url(fonts/Monoton-Regular.ttf);
+   }
+
+div{
+    display: inline-block;
+    margin: 3px;
+    padding: 100px;
+}
+.bg-img{
+    background: url(Images/cells.jpg);
+}
+.green{
+    background: rgb(0, 126, 0);
+    width: 100px;
+    font-size: 20pt;
+    font-family: 'Monoton-Regular';
+}
