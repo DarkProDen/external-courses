@@ -2,7 +2,7 @@ var obj={}
 obj.stringParam="qwerty";
 obj.numberParam=123;
 
-var CheckParamAndGetObj = function(keyName ,obj){
+var checkParamAndGetObj = function(keyName ,obj){
     resultObj={};
     haveKey=false;
     for (var key in obj){
@@ -20,7 +20,7 @@ var CheckParamAndGetObj = function(keyName ,obj){
     }   
 }
 
-console.log(CheckParamAndGetObj("stringParam",obj));
-console.log(CheckParamAndGetObj("stringParam1",obj));
+console.log(checkParamAndGetObj("stringParam",obj));
+console.log(checkParamAndGetObj("stringParam1",obj));
 
 

@@ -2,7 +2,7 @@ var obj={}
 obj.stringParam="qwerty";
 obj.numberParam=123;
 
-var CheckObjectParam = function(keyName ,obj){
+var checkObjectParam = function(keyName ,obj){
     for (var key in obj){
         if (keyName===key){
             return true;          
@@ -11,7 +11,7 @@ var CheckObjectParam = function(keyName ,obj){
     return false;  
 }
 
-console.log(CheckObjectParam("stringParam",obj));
-console.log(CheckObjectParam("stringParam1",obj));
+console.log(checkObjectParam("stringParam",obj));
+console.log(checkObjectParam("stringParam1",obj));
 
 
