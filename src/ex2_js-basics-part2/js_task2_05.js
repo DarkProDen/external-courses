@@ -1,4 +1,4 @@
-var GetMax=function(arr){
+var getMax=function(arr){
 	var i;
 	var max=arr[0]
 	for (i=1; i<arr.length; i++)
@@ -7,4 +7,4 @@ var GetMax=function(arr){
 	console.log("Максимальное значение: "+max);
 }
 
-GetMax([9,3,45]);
+getMax([9,3,45]);

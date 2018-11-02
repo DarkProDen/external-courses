@@ -1,4 +1,4 @@
-var GetType=function (variable) {
+var getType=function (variable) {
 	if (typeof (variable) ==="string")
 	{
 		console.log("это строка");
@@ -10,6 +10,6 @@ var GetType=function (variable) {
 			console.log("это не строка и не число");		
 }
 
-GetType("123");
-GetType(123);
-GetType(null);
+getType("123");
+getType(123);
+getType(null);

@@ -1,11 +1,14 @@
-var IsElementsSame=function(arr){
-	var i;
+var isElementsSame=function(arr){
 	var result=true;
-	for (i=1; i<arr.length; i++)
-		if (arr[i-1]!==arr[i])
+	var element=arr[0];
+	for (var i=1; i<arr.length; i++)
+		if (element!==arr[i])
+		{
 			result=false;
-	console.log(result);	
+			break;
+		}			
+	console.log(result);
 }
 
-IsElementsSame([1,1,1]);
-IsElementsSame([0,0,null]);
+isElementsSame([1,1,1]);
+isElementsSame([0,0,null]);

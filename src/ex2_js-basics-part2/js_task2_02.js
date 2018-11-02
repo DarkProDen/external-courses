@@ -1,9 +1,8 @@
-var GetArray=function(arr){
-	var i;
-	for (i=0; i<arr.length; i++){
+var getArray=function(arr){
+	for (var i=0; i<arr.length; i++){
 		console.log(arr[i]);
 	}		
 	console.log("Число элементов: "+arr.length);
 }
 
-GetArray([1,2,3,4]);
+getArray([1,2,3,4]);

@@ -1,9 +1,8 @@
-var GetEvenAndOdd=function(arr){
-	var i;
+var getEvenAndOdd=function(arr){
 	var even=0;
 	var odd=0;
 	var zero=0;
-	for (i=0; i<arr.length; i++){
+	for (var i=0; i<arr.length; i++){
 		if (arr[i]%2===1)
 			odd++;
 		else if (arr[i]===0)
@@ -14,4 +13,4 @@ var GetEvenAndOdd=function(arr){
 	console.log("четных: "+even+"; нечетных: "+odd+"; нуль:"+zero);
 }
 
-GetEvenAndOdd([1,2,3,0]);
+getEvenAndOdd([1,2,3,0]);
