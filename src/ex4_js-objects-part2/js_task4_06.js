@@ -1,6 +1,6 @@
 //Написать функцию, которая принимает строку и возвращает эту же строку, но с заглавным первым символом каждого слова.
 
-var SetAllFirstCharsUpper = function(str=""){
+var setAllFirstCharsUpper = function(str=""){
     var newWord=true;
     for (let index = 0; index < str.length; index++) {
         if (newWord)
@@ -16,4 +16,4 @@ var SetAllFirstCharsUpper = function(str=""){
     return str;
 }
 
-SetAllFirstCharsUpper("abc fbfds gfdg qwertyuio");
+setAllFirstCharsUpper("abc fbfds gfdg qwertyuio");

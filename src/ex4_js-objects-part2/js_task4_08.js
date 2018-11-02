@@ -1,6 +1,6 @@
 //Написать функцию, которая принимает строку и возвращает данную строку, но в lowerCamelCase нотации.
 
-var SetLowerCamelCase = function(str=""){
+var setLowerCamelCase = function(str=""){
     str= str[0].toLowerCase() + str.substring(1,str.length);
     var newWord=false;
     for (let index = 0; index < str.length; index++) {
@@ -17,4 +17,4 @@ var SetLowerCamelCase = function(str=""){
     return str;
 }
 
-SetLowerCamelCase("SQL data picker");
+setLowerCamelCase("SQL data picker");

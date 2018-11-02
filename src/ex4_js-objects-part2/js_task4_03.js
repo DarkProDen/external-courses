@@ -1,6 +1,6 @@
 //Написать функцию, которая удаляет первый и последний пробел с строке и возвращает строку без начального и завершающего пробела.
 
-var GetStrWithoutFirstAndLastSpaces = function(str=""){
+var getStrWithoutFirstAndLastSpaces = function(str=""){
     if (str[0]===" ")
     {
         str=str.substr(1,str.length-1);
@@ -12,4 +12,4 @@ var GetStrWithoutFirstAndLastSpaces = function(str=""){
     return str;
 }
 
-GetStrWithoutFirstAndLastSpaces("  123 ");
+getStrWithoutFirstAndLastSpaces("  123 ");

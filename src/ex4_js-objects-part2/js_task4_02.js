@@ -1,8 +1,8 @@
 //Написать функцию, которая создает пустой объект, но без прототипа.
 
-var CreateObjWithoutProto = function(){
+var createObjWithoutProto = function(){
     return Object.create(null);
 }
 
-var obj= CreateObjWithoutProto();
+var obj= createObjWithoutProto();
 obj;

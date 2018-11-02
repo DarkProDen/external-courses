@@ -1,6 +1,6 @@
 //Написать функцию, которая принимает строку в другую строку, после переданного номера слова.
 
-var SetAllFirstCharsUpper = function(str="",str2, num){
+var setAllFirstCharsUpper = function(str="",str2, num){
     var newWord=true;
     var wordCount=0;
     for (let index = 0; index < str.length; index++) {
@@ -29,4 +29,4 @@ var SetAllFirstCharsUpper = function(str="",str2, num){
     return str;
 }
 
-console.log(SetAllFirstCharsUpper("abc      fbfds gfdg qwertyuio", "STR2",3));
+console.log(setAllFirstCharsUpper("abc      fbfds gfdg qwertyuio", "STR2",3));

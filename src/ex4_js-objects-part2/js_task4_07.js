@@ -2,7 +2,7 @@
 //чем переданное число, то строка урезается и в конец добавляется «…», 
 //так чтобы длина отрезанной строки вместе с «…» (многоточие) равнялась переданному числу.
 
-var SetLenght = function(str="", lenght=1){
+var setLenght = function(str="", lenght=1){
     if (str.length>lenght)
     {
         str=str.substr(str, lenght-1)+"…";
@@ -10,4 +10,4 @@ var SetLenght = function(str="", lenght=1){
     return str;
 }
 
-SetLenght("abcde", 4);
+setLenght("abcde", 4);

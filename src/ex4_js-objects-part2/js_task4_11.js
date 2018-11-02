@@ -1,6 +1,6 @@
 //Написать функцию, которая посчитает сколько раз каждый символ встречается в строке.
 
-var CountChars = function(str=""){
+var countChars = function(str=""){
     var result=[];
     for (let i = 0; i < str.length; i++) {
         var charMeet=false;
@@ -20,7 +20,7 @@ var CountChars = function(str=""){
     return result;
 }
 
-var charsInfo=CountChars("asdddsqwertyasdqwe");
+var charsInfo=countChars("asdddsqwertyasdqwe");
 
 charsInfo.forEach(element => {
     console.log(element);

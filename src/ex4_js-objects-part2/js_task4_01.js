@@ -5,10 +5,10 @@ var Obj=Object.create(protObj);
 Obj.A=111;
 Obj.B=222;
 
-var GetPrototypeProp = function(obj, propName){
+var getPrototypeProp = function(obj, propName){
     return obj.__proto__[propName];
 }
 
-console.log(GetPrototypeProp(Obj,"A"));
+console.log(getPrototypeProp(Obj,"A"));
 console.log(Obj.A);
-console.log(GetPrototypeProp(Obj,"B"));
+console.log(getPrototypeProp(Obj,"B"));
