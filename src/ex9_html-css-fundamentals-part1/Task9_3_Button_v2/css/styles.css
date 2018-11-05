@@ -1,0 +1,25 @@
+
+.btn__star {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6em;
+    color: gray;
+    top:0.05em;
+}
+.btn__text {
+    display: inline-block;
+    font: bold 1.2em Arial, Helvetica; 
+    margin: 0 0.3em 0.45em 0.3em;
+    color: #555;
+}
+.btn {
+    font-size: 14pt;
+    margin: 30px;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+    border: 1px solid #a1a1a1;
+    width: fit-content;
+    border-radius: .5em;
+    background: rgb(203, 203, 203) linear-gradient(rgb(224, 224, 224), rgb(175, 175, 175));
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5), 0 0 0 5px #cbcbcb, 0 0 0 6.5px white, 0 0 0 8px #8c8c8c;
+}
