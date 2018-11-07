@@ -1,0 +1,6 @@
+select option.bold {
+    font-weight: bold;
+}
+select option.tab {
+    padding-left: 1em;
+}

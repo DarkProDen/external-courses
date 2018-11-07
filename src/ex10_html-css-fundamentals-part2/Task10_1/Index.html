@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>task10_1</title>
+  <meta name="description" content="Epam external-courses Task HTML CSS">
+  <meta name="keywords" content="Epam external-courses Task HTML CSS">
+  <meta name="author" content="Вилков Денис">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+  <form action="http://httpbin.org/post" method="POST">
+    <fieldset>
+      <legend>Personal data</legend>
+      <p>
+        Surname 
+        <input type="text" name="Surname" value="Surname value">
+      </p>
+      <p>
+        First name 
+        <input type="text" name="First_name" value="First_name value">
+      </p>
+      <p>
+        Middle name  
+        <input type="text" name="Middle_name" value="Middle_name value"> 
+      </p>
+      <p>
+        You are
+        <input name="gender" type="radio" value="male" checked> male
+        <input name="gender" type="radio" value="femele"> femele
+        <input name="gender" type="radio" value="other"> other
+      </p>
+      <p>
+        Age 
+        <input name="Age" type="number" min="18" max="101" value="18">
+      </p>
+      <p>
+        Country of residence 
+        <select size="1" name="Country">
+          <option value="Russia">Russia</option>
+          <option value="USA">USA</option>
+          <option value="Japan">Japan</option>
+        </select>
+      </p>
+      <p>
+        City
+        <input name="City" type="checkbox" value="Ryazan" checked> Ryazan
+        <input name="City" type="checkbox" value="Moscow"> Moscow
+      </p>
+      Photography 
+      <input type="file" name="photo" accept="image/*" value="Выберите файл">
+      <hr>   
+      <p>
+        Title
+        <select size="8" name="Title">
+          <option value="1" class="bold">1234567890</option>
+          <option value="2" class="tab">1234567890</option>
+          <option value="3" class="tab">1234567890</option>
+          <option value="4" class="tab">1234567890</option>
+          <option value="5" class="bold">1234567890</option>
+          <option value="6" class="tab">1234567890</option>
+          <option value="7" class="tab">1234567890</option>
+          <option value="8" class="tab">1234567890</option>
+        </select>
+      </p>
+      <p>
+        Salary
+        <input name="Salary" type="range" min="0" max="100" step="1" value="50"> 
+      </p>
+      <p>
+        <textarea name="About" rows="8" cols="40" placeholder="Tell us about yourself..."></textarea> 
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Contact information</legend>
+      <p>
+        Site 
+        <input name="Site" type="text">
+      </p>
+      <p>
+        Email
+        <input name="Email" type="text">
+      </p>
+      <p>
+        Phone 
+        <input name="Phone" type="text">
+      </p>
+    </fieldset>
+    <p>
+      Password 
+      <input name="password" type="password">
+    </p>
+    <input type="submit" value="Отправить">
+    <input type="reset" value="Очистить">
+  </form>
+</body>
+</html>
