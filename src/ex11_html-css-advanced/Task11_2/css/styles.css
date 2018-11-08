@@ -1,0 +1,59 @@
+@keyframes load {
+    0% {
+        background-color: white;
+        box-shadow: 30px 0 0 white, 60px 0 0 white;
+    }
+    25% {
+        background-color: blue;
+        box-shadow: 30px 0 0 white, 60px 0 0 white;
+    }
+    50% {
+        background-color: blue;
+        box-shadow: 30px 0 0 blue, 60px 0 0 white;
+    }
+    75% {
+        background-color: blue;
+        box-shadow: 30px 0 0 blue, 60px 0 0 blue;
+    }
+    100% {
+        background-color: white;
+        box-shadow: 30px 0 0 white, 60px 0 0 white;
+    }
+}
+
+@keyframes jump {
+    0% {
+        margin: 0 0 100px 37.5px;
+    }
+    50% {
+        margin: 100px 0 0 37.5px;
+    }
+    100% {
+        margin: 0 0 100px 37.5px;
+    }
+}
+
+.loader {
+    margin: 20px;
+    display: inline-block;
+    background-color: blue;
+    width:15px; height: 15px;
+    border-radius: 50%;
+    box-shadow: 30px 0 0 blue, 60px 0 0 blue;
+    animation: load 2s infinite;
+    animation-timing-function: linear;
+}
+
+.block{
+    background-color: gray;
+    width:100px; height: 50px;
+}
+
+.ball {
+    margin: 0 0 100px 37.5px;
+    background-color: red;
+    width:25px; height: 25px;
+    border-radius: 50%;
+    animation: jump 1s infinite;
+    animation-timing-function: ease-in;
+}
