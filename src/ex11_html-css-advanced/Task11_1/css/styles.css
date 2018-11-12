@@ -1,0 +1,16 @@
+.circle {
+    margin: 50px;
+    width: 200px;
+    height: 200px;
+    background-image: url(Images/fire.jpg);
+    border-radius: 50%;
+}
+
+.dragon {
+    width: 802px;
+    height: 457px;
+    -webkit-mask-position-y: -200px;
+    background-image: url(Images/fire.jpg);
+    -webkit-mask-image: url(Images/dragon.svg);
+    mask-image: url(Images/dragon.svg);
+}
