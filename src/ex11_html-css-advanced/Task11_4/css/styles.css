@@ -52,7 +52,7 @@ body {
 .main-nav-btn {
     font-family: 'Proxima Nova Rg', 'Font Awesome';
     border: 0;
-    width: 200px;
+    width: 100%;
     height: 38px;
     padding-left: 20px;
     font-size: 13px;
@@ -98,10 +98,19 @@ body {
 }
 
 .history-item {
+    display: flex;
+    margin: 35px 20px;
     font-family: 'Proxima Nova Rg', 'Font Awesome';
     font-size: 12px;
     line-height: 18px;
-    color: #6f7d95;
+    color: #545d74;
+}
+.history-item__icon {
+    margin-right: 10px;
+}
+.history-item__text a {
+    text-decoration: none;
+    color: #677b92;
 }
 
 #content {
