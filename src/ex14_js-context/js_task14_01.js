@@ -1,11 +1,8 @@
 function Calculator(){
     var value=0;
-    function fetchData(callback){ 
-        var promise = new Promise((resolve)=>{
-            callback();
-            resolve();
-        });
-        promise.then(function(){value=500;});
+    async function fetchData(callback){ 
+        var cb = await callback();   
+        value=cb;   
     }
     function getResult(){
         return value;
@@ -37,7 +34,14 @@ function Calculator(){
 }
 
 var calculator = new Calculator();
-calculator.add(100);
+const result = calculator.add(100)
+    .multiply(2)
+    .divide(20)
+    .reset()
+    .subtract(1)
+    .getResult();
+
+console.log(result); // -1
 
 calculator.reset();
 console.log(calculator.getResult()); //0
@@ -47,11 +51,14 @@ calculator.setState(1);
 console.log(calculator.getResult()); // 1
 
 var xMLHttpRequest = function(){
-    setTimeout(function(){},2000);
+    return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(500);
+        }, 2000);
+      });
 };
 
 calculator.fetchData(xMLHttpRequest);
 
 console.log(calculator.getResult());
-
-setTimeout(function(){console.log(calculator.getResult());},5000);
+setTimeout(function(){console.log(calculator.getResult());},2100);
