@@ -1,50 +1,57 @@
-//Создать калькулятор, который может выполнять операции сложения, вычитания, деления и умножения.
-
 function Calculator(){
     var value=0;
+    function fetchData(callback){ 
+        var promise = new Promise((resolve)=>{
+            callback();
+            resolve();
+        });
+        promise.then(function(){value=500;});
+    }
     function getResult(){
         return value;
     }
+    function setState(num=0){
+        value=num;
+    }
     function reset(){
-        return value=0;
+        value=0;
+        return this;
     }
     function add(num=0){
         value+=num;
-        return add;
+        return this;
     }
     function subtract(num=0){
         value-=num;
-        return subtract;
+        return this;
     }
     function divide(num=1){
         value/=num;
-        return divide;
+        return this;
     }
     function multiply(num=1){
         value*=num;
-        return multiply;
+        return this;
     }
-    return {getResult, reset, add, subtract, divide, multiply};
+    return {fetchData, getResult, setState, reset, add, subtract, divide, multiply};
 }
 
 var calculator = new Calculator();
+calculator.add(100);
 
-console.log(calculator.getResult()); // 0
-calculator.add(4);
-calculator.subtract(1);
-console.log(calculator.getResult()); // 3
-calculator.subtract(3);
-console.log(calculator.getResult()); // 0
-calculator.add(4)(1);
-console.log(calculator.getResult()); // 5
-calculator.subtract(1)(1)(1)(1)(1);
-console.log(calculator.getResult()); // 0
-calculator.multiply(5);
-console.log(calculator.getResult()); // 0
-calculator.add(1)(1)(1)(2); //5
-console.log(calculator.getResult()); // 5
-calculator.multiply(2)(5);
-console.log(calculator.getResult()); // 50
-calculator.divide(2);
-console.log(calculator.getResult()); // 25
-console.log(calculator.reset());
+calculator.reset();
+console.log(calculator.getResult()); //0
+
+calculator.setState(1);
+
+console.log(calculator.getResult()); // 1
+
+var xMLHttpRequest = function(){
+    setTimeout(function(){},2000);
+};
+
+calculator.fetchData(xMLHttpRequest);
+
+console.log(calculator.getResult());
+
+setTimeout(function(){console.log(calculator.getResult());},5000);
