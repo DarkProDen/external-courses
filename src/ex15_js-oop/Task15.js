@@ -43,17 +43,16 @@ var Chandelier = function (name, power) {
     Device.apply(this, arguments);
     this.type = 'Chandelier';
     this.luminousFlux = 2000;
-    this.lamps = [new Lamp(name + '__lamp1', power / 3), 
-        new Lamp(name + '__lamp2', power / 3), 
-        new Lamp(name + '__lamp3', power / 3)];
+    this.lamps = [new Lamp(name + '__lamp1', power / 3),
+    new Lamp(name + '__lamp2', power / 3),
+    new Lamp(name + '__lamp3', power / 3)];
 }
 Chandelier.prototype = Object.create(Device.prototype);
 Chandelier.prototype.constructor = Chandelier;
 Chandelier.prototype.switchOnOff = function () {
-    for (let i = 0; i < this.lamps.length; i++) {
-        const lamp = this.lamps[i];
+    this.lamps.forEach(lamp => {
         lamp.switchOnOff();
-    }
+    });
     if (this.enabled) {
         this.enabled = false;
         console.log(this.name + ' disabled');
@@ -105,27 +104,18 @@ Screen.prototype.constructor = Screen;
 
 var Room = function (name, devices) {
     this.name = name;
-    this.devices = [];
-    devices.forEach(device => {
-        this.devices.push(device);
-    });
+    this.devices = devices;
 }
 Room.prototype.constructor = Room;
 Room.prototype.getPower = function () {
-    var result = 0;
-    for (let i = 0; i < this.devices.length; i++) {
-        const device = this.devices[i];
-        result += device.getPower();
-    }
-    return result;
+    return this.devices.reduce(function (accumulator, device) {
+        return accumulator + device.getPower();
+    }, 0);
 }
 Room.prototype.getDevice = function (deviceName) {
-    for (let i = 0; i < this.devices.length; i++) {
-        const device = this.devices[i];
-        if (device.name === deviceName) {
-            return device;
-        }
-    }
+    return this.devices.find(device => {
+        return device.name === deviceName;
+    });
 }
 
 var tv = new Screen('TV', 300);
@@ -143,12 +133,12 @@ var room = new Room('Kitchen',
     new Device('Microwave', 2000),
     new Screen('TV', 300)]);
 
-for (let i = 0; i < room.devices.length; i+=2) {
+for (let i = 0; i < room.devices.length; i += 2) {
     const device = room.devices[i];
     device.switchOnOff();
 }
 console.log('Room consuming ' + room.getPower() + ' W');
-for (let i = 1; i < room.devices.length; i+=2) {
+for (let i = 1; i < room.devices.length; i += 2) {
     const device = room.devices[i];
     device.switchOnOff();
 }
@@ -157,14 +147,15 @@ room.getDevice('HAIER C2F637CGG').openClose();
 console.log('Room consuming ' + room.getPower() + ' W');
 room.getDevice('HAIER C2F637CGG').openClose();
 console.log('Room consuming ' + room.getPower() + ' W');
-for (let i = 0; i < room.devices.length; i+=2) {
+for (let i = 0; i < room.devices.length; i += 2) {
     const device = room.devices[i];
     device.switchOnOff();
 }
 console.log('Room consuming ' + room.getPower() + ' W');
-for (let i = 1; i < room.devices.length; i+=2) {
+for (let i = 1; i < room.devices.length; i += 2) {
     const device = room.devices[i];
     device.switchOnOff();
 }
 console.log('Room consuming ' + room.getPower() + ' W');
 
+room.getDevice('TV').print();
