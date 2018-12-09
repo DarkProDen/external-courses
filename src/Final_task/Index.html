@@ -11,6 +11,85 @@
   <script src="script/main-script.js"></script>
 </head>
 <body>
-    <div id="request-text"></div>
+  <div id="container">
+    <div id="header"></div>
+    <div id="sidebar">
+        <input type="button" class="red-btn" value="   ADD A BOOK">
+        <div class="line"></div>
+        <input type="button" class="main-nav-btn" value="    Now Reading">
+        <input type="button" class="main-nav-btn" value="    Browse">
+        <input type="button" class="main-nav-btn" value="    Buy Books">
+        <input type="button" class="main-nav-btn" value="    Favourite Books">
+        <input type="button" class="main-nav-btn" value="    Wishlist">
+        <input type="button" class="main-nav-btn" value="    History">
+        <div class="line" style="margin-top:12px; margin-bottom: 15px;"></div>
+        <input type="button" id="mrt" class="main-nav-btn categ-btn" value="Must Read Titles"><label for="mrt"></label>
+        <input type="button" id="bol" class="main-nav-btn categ-btn" value="Best Of List"><label for="bol"></label>
+        <input type="button" id="cn" class="main-nav-btn categ-btn" value="Classic Novesls"><label for="cn"></label>
+        <input type="button" id="nf" class="main-nav-btn categ-btn" value="Non Fiction"><label for="nf"></label>
+        <div class="line" style="margin-top:15px;"></div>
+        <div class="history-item">
+          <div class="history-item__icon"></div>
+          <div class="history-item__text">
+            You added <a href="">Fight Club</a> by <a href="">Chuck Palahniuk</a> to your <a href="">Must Read Titles</a>.
+            <br><br>
+            24 minutes ago 
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-item__icon"></div>
+          <div class="history-item__text">
+            You added <a href="">The Trial</a> by <a href="">Franz Kafka</a> to your <a href="">Must Read Titles</a>.
+            <br><br>
+            48 minutes ago
+          </div>      
+        </div>  
+    </div>
+    <div id="content">
+      <div id="top-panel">
+        Browse Available Books
+      </div>
+      <div id="filter-bg">
+        <input type="button" class="filter" value="All Books">
+        <input type="button" class="filter" value="Most Recent">
+        <input type="button" class="filter" value="Most Popular">
+        <input type="button" class="filter" value="Free Books">
+      </div>
+      <div id="books-container">
+        <div class="book">
+          <div class="book__image"></div>
+          <div class="book__rating">
+            <img class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="half-star"></div>
+            <div class="empty-star"></div>
+          </div> 
+        </div>
+        <div class="book">
+
+        </div>
+        <div class="book">
+  
+        </div>
+        <div class="book">
+            
+        </div>
+        <div class="book">
+         
+        </div>
+        <div class="book">
+            
+        </div>
+        <div class="book">
+            
+        </div>
+        <div class="book">
+            
+        </div>
+      </div>
+    </div>  
+    <div id="footer"></div>
+  </div>
 </body>
 </html>
