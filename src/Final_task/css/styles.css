@@ -182,15 +182,20 @@ body {
 }
 
 .book .book__rating {
-
+    cursor: default;
 }
 
 .star {
     display: inline-block;
     -webkit-mask-image: url(Images/Stars/star-solid.svg);
     mask-image: url(Images/Stars/star-solid.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
     background-color: #ffab00;
     width: 13px; height: 13px;
+}
+.star:hover {
+    cursor: pointer;
 }
 
 .half-star {
