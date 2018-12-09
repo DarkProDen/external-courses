@@ -186,7 +186,16 @@ body {
 }
 
 .star {
-    background-filter: url('Images/Stars/star-solid.svg');
+    display: inline-block;
+    -webkit-mask-image: url('Images/Stars/star-solid.svg');
     background-color: #ffab00;
     width: 13px; height: 13px;
+}
+
+.half-star {
+    -webkit-mask-image: url('Images/Stars/star-half-alt-solid.svg');
+}
+
+.empty-star {
+    -webkit-mask-image: url('Images/Stars/star-regular.svg');
 }
