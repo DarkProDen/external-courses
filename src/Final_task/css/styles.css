@@ -187,15 +187,18 @@ body {
 
 .star {
     display: inline-block;
-    -webkit-mask-image: url('Images/Stars/star-solid.svg');
+    -webkit-mask-image: url(Images/Stars/star-solid.svg);
+    mask-image: url(Images/Stars/star-solid.svg);
     background-color: #ffab00;
     width: 13px; height: 13px;
 }
 
 .half-star {
-    -webkit-mask-image: url('Images/Stars/star-half-alt-solid.svg');
+    -webkit-mask-image: url(Images/Stars/star-half-alt-solid.svg);
+    mask-image: url(Images/Stars/star-half-alt-solid.svg);
 }
 
 .empty-star {
-    -webkit-mask-image: url('Images/Stars/star-regular.svg');
+    -webkit-mask-image: url(Images/Stars/star-regular.svg);
+    mask-image: url(Images/Stars/star-regular.svg);
 }
