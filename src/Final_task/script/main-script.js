@@ -8,19 +8,27 @@ function showData(data) {
         }
     });
 }
-/*
+
 function showBooks(books) {
-    console.log(books);
     books.forEach(book => {
         var newBook = document.createElement('div');
-        document.body.appendChild(newBook);
-        for (key in book) {
-            newBook.textContent += book[key] + ' ';
-        }
+        newBook.id = 'b#' + book.id;
+        newBook.className = "book";
+        document.getElementById('books-container').appendChild(newBook);
+        var bookImg = document.createElement('div');
+        bookImg.className = "book__image";
+        bookImg.style.background = "url(" + book.image_url + ") no-repeat";
+        newBook.appendChild(bookImg);
+        var bookTitle = document.createElement('div');
+        bookTitle.className = "book__title";
+        bookTitle.textContent = book.title;
+        newBook.appendChild(bookTitle);
+        var bookAuthor = document.createElement('div');
+        bookAuthor.className = 'book__title';
     });
 }
-*/
 getAndShowData('https://rsu-library-api.herokuapp.com/books', showData);
+getAndShowData('https://rsu-library-api.herokuapp.com/books', showBooks);
 getAndShowData('https://rsu-library-api.herokuapp.com/filters', showData);
 getAndShowData('https://rsu-library-api.herokuapp.com/categories', showData);
 //showBooks(books);
