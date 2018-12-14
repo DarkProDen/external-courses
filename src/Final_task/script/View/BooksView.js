@@ -2,7 +2,7 @@ var BooksView = function BooksView() {
 };
 
 BooksView.prototype.render = function render(books) {
-    //document.getElementById('books-container').innerHTML = '';
+    document.getElementById('books-container').innerHTML = '';
     console.log(books);
     books.forEach(book => {
         var newBook = document.createElement('div');

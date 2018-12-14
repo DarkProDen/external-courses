@@ -1,9 +1,8 @@
-var Controller = function Controller(view, model) {
-    this.view = view;
-    this.model = model;
+var Controller = function Controller(booksView, booksModel) {
+    this.booksView = booksView;
+    this.booksModel = booksModel;
 }
 
 Controller.prototype.initialize = function initialize() {
-    this.model.loadBooks(this.view.render);
-
+    this.booksModel.loadBooks(this.booksView.render);
 };
