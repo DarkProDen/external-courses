@@ -1,3 +1,8 @@
+var booksModel = new BooksModel();
+var booksView = new BooksView();
+var controller = new Controller(booksView, booksModel);
+controller.initialize();
+/*
 function showData(data) {
     console.log(data);
     data.forEach(obj => {
@@ -32,3 +37,4 @@ getAndShowData('https://rsu-library-api.herokuapp.com/books', showBooks);
 getAndShowData('https://rsu-library-api.herokuapp.com/filters', showData);
 getAndShowData('https://rsu-library-api.herokuapp.com/categories', showData);
 //showBooks(books);
+*/
