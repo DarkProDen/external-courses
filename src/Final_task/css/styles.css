@@ -141,6 +141,8 @@ body {
 }
 
 #filter-bg {
+    display: flex;
+    align-items: center;
     padding-left: 20px;
     height: 49px; width: 100%;
     background-color: #eef1f7;
@@ -169,3 +171,29 @@ body {
     padding: 20px 10px
 }
 
+.search {  
+    
+    margin-left: auto;
+    margin-right: 40px;
+    outline: none;
+    padding-left: 18px;
+    width: 40%;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    border: 1px solid rgba(140,151,178,0.4);
+
+    font-size: 13px;
+    color: #444c63;
+    font-family: 'Proxima Nova Rg', 'Font Awesome';
+}
+
+.search::placeholder {
+    font-size: 13px;
+    color: #8c97b2;
+    font-family: 'Proxima Nova Rg', 'Font Awesome';
+}
+
+.search::after {
+    content: "123";
+}
