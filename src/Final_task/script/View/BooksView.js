@@ -41,7 +41,7 @@ BooksView.prototype.render = function render(books) {
     */
 };
 
-BooksView.prototype.renderCategories = function renderCategories(categories,controller) {
+BooksView.prototype.renderCategories = function renderCategories(categories, controller) {
     document.getElementById('categories-container').innerHTML = '';
     categories.forEach(category => {
         var newCategory = document.createElement('input');
@@ -50,13 +50,31 @@ BooksView.prototype.renderCategories = function renderCategories(categories,cont
         newCategory.id = id;
         newCategory.className = "main-nav-btn categ-btn";
         newCategory.value = category.title;
-        newCategory.addEventListener('click',controller.onCategoryClick,false);
+        newCategory.addEventListener('click', controller.onCategoryClick, false);
         document.getElementById('categories-container').appendChild(newCategory);
         var newLabel = document.createElement('label');
         newLabel.htmlFor = id;
         newLabel.style.background = category.color;
         document.getElementById('categories-container').appendChild(newLabel);
     });
+}
+
+BooksView.prototype.renderFilters = function renderFilters(controller) {
+    let cont = document.getElementById('filters-container');
+    cont.innerHTML = '';
+    let filters = ['All Books', 'Most Recent', 'Most Popular', 'Free Books'];
+    filters.forEach(filter => {
+        var newFilter = document.createElement('input');
+        newFilter.type = 'button';
+        newFilter.className = 'filter';
+        newFilter.value = filter;
+        newFilter.addEventListener('click', controller.onFilterClick, false);
+        document.getElementById('filters-container').appendChild(newFilter);
+    });
+}
+
+BooksView.prototype.renderHistory = function renderCategories(history) {
+
 }
 
 BooksView.prototype.getCategories = function getCategories() {

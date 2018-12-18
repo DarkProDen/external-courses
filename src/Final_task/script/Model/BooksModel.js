@@ -56,6 +56,35 @@ BooksModel.prototype.filterBooksByCategory = function filterBooksByCategory(cate
     callback(this.displayedBooks);
 }
 
+BooksModel.prototype.filterByFilter = function filterByFilter(filter, callback) {
+    switch (filter) {
+        case 'All Books':
+            this.displayedBooks = this.books;
+            break;
+        case 'Most Recent':
+            this.displayedBooks = this.books;
+            break;
+        case 'Most Popular':
+            this.displayedBooks = this.books.filter(function (book) { return book.rating === 5; });
+            break;
+        case 'Free Books':
+            this.displayedBooks = this.books.filter(function (book) { return book.cost === 0; });
+            break;
+        default:
+            this.displayedBooks = this.books;
+            break;
+    }
+    callback(this.displayedBooks);
+}
+
+BooksModel.prototype.refreshHistory = function refreshHistory(books) {
+    let lastBooks = [];
+    lastBooks.push([books[0], books[1]]);
+    for (let i = 2; i < books.length; i++) {
+        const book = array[i];
+    }
+}
+
 BooksModel.prototype.addBook = function addBook(book) {
     this.books.push(book);
 }

@@ -1,7 +1,9 @@
-var booksModel = new BooksModel();
-var booksView = new BooksView();
-var controller = new Controller(booksView, booksModel);
-controller.initialize();
+document.addEventListener('DOMContentLoaded', function () {
+    window.booksModel = new BooksModel();
+    window.booksView = new BooksView();
+    window.controller = new Controller(window.booksView, window.booksModel);
+    window.controller.initialize();
+}, false);
 /*
 function showData(data) {
     console.log(data);

@@ -6,7 +6,14 @@ var Controller = function Controller(booksView, booksModel) {
 Controller.prototype.initialize = function initialize() {
     this.booksModel.loadBooks(this.booksView.render, this.booksModel);
     this.booksModel.loadCategories(this.booksView.renderCategories, this, this.booksModel);
+    this.booksView.renderFilters(this);
 };
+
+Controller.prototype.onFilterClick = function onFilterClick() {
+    let filter = this.value;
+    booksModel.filterByFilter(filter,booksView.render);
+}
+
 Controller.prototype.onCategoryClick = function onCategoryClick() {
     let elementId = this.id;
     let category = booksModel.categories.find(function (category) {
