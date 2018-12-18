@@ -151,6 +151,7 @@ body {
 }
 
 .filter {
+    margin: 0 2px;
     outline:none;
     height: 20px; 
     border-radius: 9px;
@@ -160,6 +161,11 @@ body {
     font-family: 'Proxima Nova Rg', 'Font Awesome';
     border: none;
     background-color: transparent;
+}
+
+.filter-checked{
+    background-color: #97b3ce;
+    color: #ffffff;
 }
 
 .filter:hover {

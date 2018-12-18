@@ -1,5 +1,7 @@
 var BooksModel = function () {
     this.books = [];
+    this.searchString='';
+    this.categories=[];
 }
 BooksModel.prototype = Object.create(Model.prototype);
 BooksModel.prototype.constructor = BooksModel;

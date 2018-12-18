@@ -41,3 +41,7 @@ BooksView.prototype.render = function render(books) {
         previousPenguin.addEventListener('click', this.onClickGetPenguin);
     */
 };
+
+BooksView.prototype.getCategories = function getCategories() {
+    
+}
