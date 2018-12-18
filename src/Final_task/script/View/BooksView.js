@@ -3,7 +3,6 @@ var BooksView = function BooksView() {
 
 BooksView.prototype.render = function render(books) {
     document.getElementById('books-container').innerHTML = '';
-    console.log(books);
     books.forEach(book => {
         var newBook = document.createElement('div');
         newBook.id = 'b#' + book.id;
@@ -25,14 +24,14 @@ BooksView.prototype.render = function render(books) {
         var bookRating = document.createElement('div');
         bookRating.className = 'book__rating';
         for (let i = 0; i < 5; i++) {
-            var star=document.createElement('div');
-            if (i<book.rating) {
+            var star = document.createElement('div');
+            if (i < book.rating) {
                 star.className = 'star';
             }
             else {
                 star.className = 'star empty-star';
             }
-            bookRating.appendChild(star);        
+            bookRating.appendChild(star);
         }
         newBook.appendChild(bookRating);
     });
@@ -42,6 +41,24 @@ BooksView.prototype.render = function render(books) {
     */
 };
 
+BooksView.prototype.renderCategories = function renderCategories(categories,controller) {
+    document.getElementById('categories-container').innerHTML = '';
+    categories.forEach(category => {
+        var newCategory = document.createElement('input');
+        var id = 'category#' + category.id;
+        newCategory.type = 'button';
+        newCategory.id = id;
+        newCategory.className = "main-nav-btn categ-btn";
+        newCategory.value = category.title;
+        newCategory.addEventListener('click',controller.onCategoryClick,false);
+        document.getElementById('categories-container').appendChild(newCategory);
+        var newLabel = document.createElement('label');
+        newLabel.htmlFor = id;
+        newLabel.style.background = category.color;
+        document.getElementById('categories-container').appendChild(newLabel);
+    });
+}
+
 BooksView.prototype.getCategories = function getCategories() {
-    
+    return document.getElementsByClassName("main-nav-btn categ-btn");
 }

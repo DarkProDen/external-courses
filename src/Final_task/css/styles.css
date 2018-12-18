@@ -85,19 +85,6 @@ body {
     top:-17px;
     Left:25px;
 }
-.categ-btn+label[for="mrt"] {
-    background: #e64c66;
-}
-.categ-btn+label[for="bol"] {
-    background: #ffab00;
-}
-.categ-btn+label[for="cn"] {
-    background: #00bfdd;
-}
-.categ-btn+label[for="nf"] {
-    background: #7874cf;
-}
-
 .history-item {
     display: flex;
     margin: 35px 20px;
