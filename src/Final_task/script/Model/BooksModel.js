@@ -1,6 +1,11 @@
 var BooksModel = function () {
     this.books = [];
-    this.displayedBooks = [];
+    this.displayedBooks = [{
+        id: 1, title: "Jewels of Nizam", author: { firstName: "Geeta", lastName: "Devi" },
+        rating: 5, cost: 100, categories: ["must_read", "best", "non_fiction"],
+        createdAt: 1506943763424, updatedAt: 1528046197707,
+        image_url: "http://rsu-library-api.herokuapp.com/static/images/JewelsOfNizam.jpg"
+    }];
     this.searchString = '';
     this.categories = [{ id: 1, title: "Must Read Titles", type: "must_read", color: "#ff517e" }];
 }
