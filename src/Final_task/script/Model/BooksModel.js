@@ -56,14 +56,13 @@ booksModel.filterBooksByCategory = function (categoryType, callback) {
     callback(this.displayedBooks);
 }
 
-booksModel.useRecentBooks = function () {
+booksModel.getRecentBooks = function () {
     let sortedBooks = Object.create(this.books);
     function compareDates(bookA, bookB) {
         return bookB.updatedAt - bookA.updatedAt;
     }
     sortedBooks.sort(compareDates);
     let recentBooks = [sortedBooks[0], sortedBooks[1], sortedBooks[2]];
-    //callback(recentBooks);
     return recentBooks;
 }
 
@@ -85,6 +84,14 @@ booksModel.filterByFilter = function (filter, callback) {
             this.displayedBooks = this.books;
             break;
     }
+    callback(this.displayedBooks);
+}
+
+booksModel.filterBySearch = function (searchString, callback) {
+    this.displayedBooks = this.books.filter(function (book) {
+        return book.title.includes(searchString)
+            || (book.author.firstName+' '+book.author.lastName).includes(searchString);
+    });
     callback(this.displayedBooks);
 }
 

@@ -35,7 +35,7 @@ booksView.render = function (books) {
         }
         newBook.appendChild(bookRating);
     });
-    booksView.renderHistory(booksModel.useRecentBooks());
+    booksView.renderHistory(booksModel.getRecentBooks());
 };
 
 booksView.renderCategories = function (categories, controller) {
