@@ -38,7 +38,7 @@ booksView.render = function (books) {
     booksView.renderHistory(booksModel.getRecentBooks());
 };
 
-booksView.renderCategories = function (categories, controller) {
+booksView.renderCategories = function (categories, onCategoryClick) {
     document.getElementById('categories-container').innerHTML = '';
     categories.forEach(category => {
         var newCategory = document.createElement('input');
@@ -47,7 +47,7 @@ booksView.renderCategories = function (categories, controller) {
         newCategory.id = id;
         newCategory.className = "main-nav-btn categ-btn";
         newCategory.value = category.title;
-        newCategory.addEventListener('click', controller.onCategoryClick, false);
+        newCategory.addEventListener('click', onCategoryClick, false);
         document.getElementById('categories-container').appendChild(newCategory);
         var newLabel = document.createElement('label');
         newLabel.htmlFor = id;
@@ -56,7 +56,7 @@ booksView.renderCategories = function (categories, controller) {
     });
 };
 
-booksView.renderFilters = function (controller) {
+booksView.renderFilters = function (onFilterClick) {
     let cont = document.getElementById('filters-container');
     cont.innerHTML = '';
     let filters = ['All Books', 'Most Recent', 'Most Popular', 'Free Books'];
@@ -65,7 +65,7 @@ booksView.renderFilters = function (controller) {
         newFilter.type = 'button';
         newFilter.className = 'filter';
         newFilter.value = filter;
-        newFilter.addEventListener('click', controller.onFilterClick, false);
+        newFilter.addEventListener('click', onFilterClick, false);
         document.getElementById('filters-container').appendChild(newFilter);
     });
 };

@@ -43,11 +43,11 @@ booksModel.loadBooks = function (render) {
         });
 }
 
-booksModel.loadCategories = function (renderCategories, controller) {
+booksModel.loadCategories = function (renderCategories, onCategoryClick) {
     this.loadData('https://rsu-library-api.herokuapp.com/categories',
         function setCategories(categories) {
             booksModel.categories = categories;
-            renderCategories(booksModel.categories, controller);
+            renderCategories(booksModel.categories, onCategoryClick);
         });
 }
 
@@ -72,7 +72,7 @@ booksModel.filterByFilter = function (filter, callback) {
             this.displayedBooks = this.books;
             break;
         case 'Most Recent':
-            this.displayedBooks = this.useRecentBooks(() => { ; });
+            this.displayedBooks = this.getRecentBooks();
             break;
         case 'Most Popular':
             this.displayedBooks = this.books.filter(function (book) { return book.rating === 5; });

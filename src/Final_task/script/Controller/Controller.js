@@ -3,8 +3,8 @@ var booksController = {
 
 booksController.initialize = function () {
     booksModel.loadBooks(booksView.render);
-    booksModel.loadCategories(booksView.renderCategories, this);
-    booksView.renderFilters(this);
+    booksModel.loadCategories(booksView.renderCategories, this.onCategoryClick);
+    booksView.renderFilters(this.onFilterClick);
     document.getElementById('search').addEventListener('keydown', this.onSearchKeyDown);
 };
 
