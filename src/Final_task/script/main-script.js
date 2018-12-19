@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    window.booksModel = new BooksModel();
-    window.booksView = new BooksView();
-    window.controller = new Controller(window.booksView, window.booksModel);
-    window.controller.initialize();
+    booksController.initialize();
 }, false);
 /*
 function showData(data) {
