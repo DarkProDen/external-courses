@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Final_task</title>
+  <meta name="description" content="Epam external-courses Final_task HTML CSS JS">
+  <meta name="keywords" content="Epam external-courses Final_task HTML CSS JS">
+  <meta name="author" content="Вилков Денис">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="script/Model/Book.js"></script>
+  <script src="script/Model/Author.js"></script>
+  <script src="script/Model/BooksModel.js"></script>
+  <script src="script/View/BooksView.js"></script>
+  <script src="script/Controller/Controller.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <div id="header"></div>
+    <div id="sidebar">
+      <input type="button" id="add-book-btn" class="red-btn" value="   ADD A BOOK">
+      <div class="line"></div>
+      <input type="button" class="main-nav-btn" value="    Now Reading">
+      <input type="button" class="main-nav-btn" value="    Browse">
+      <input type="button" class="main-nav-btn" value="    Buy Books">
+      <input type="button" class="main-nav-btn" value="    Favourite Books">
+      <input type="button" class="main-nav-btn" value="    Wishlist">
+      <input type="button" class="main-nav-btn" value="    History">
+      <div class="line" style="margin-top:12px; margin-bottom: 15px;"></div>
+      <div id="categories-container">
+        <!--
+          <input type="button" id="mrt" class="main-nav-btn categ-btn" value="Must Read Titles"><label for="mrt"></label>
+          <input type="button" id="bol" class="main-nav-btn categ-btn" value="Best Of List"><label for="bol"></label>
+          <input type="button" id="cn" class="main-nav-btn categ-btn" value="Classic Novesls"><label for="cn"></label>
+          <input type="button" id="nf" class="main-nav-btn categ-btn" value="Non Fiction"><label for="nf"></label>
+          -->
+      </div>
+      <div class="line" style="margin-top:15px;"></div>
+      <div id="history-container">
+        <div class="history-item">
+          <div class="history-item__icon"></div>
+          <div class="history-item__text">
+            You added
+            <a href="">Fight Club</a> by
+            <a href="">Chuck Palahniuk</a> to your
+            <a href="">Must Read Titles</a>.
+            <br>
+            <br> 24 minutes ago
+          </div>
+        </div>
+        <div class="history-item">
+          <div class="history-item__icon"></div>
+          <div class="history-item__text">
+            You added
+            <a href="">The Trial</a> by
+            <a href="">Franz Kafka</a> to your
+            <a href="">Must Read Titles</a>.
+            <br>
+            <br> 48 minutes ago
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="top-panel">
+        Browse Available Books
+      </div>
+      <div id="filter-bg">
+        <div id="filters-container">
+          <!--
+          <input type="button" class="filter filter-checked" value="All Books">
+          <input type="button" class="filter" value="Most Recent">
+          <input type="button" class="filter" value="Most Popular">
+          <input type="button" class="filter" value="Free Books">
+          -->
+        </div>
+        <input type="text" id="search" class="search" placeholder="Enter Keywords">
+      </div>
+      <div id="books-container">
+        <!--
+        <div class="book">
+          <div class="book__image"></div>
+          <div class="book__title">Jewels of Nizam</div>
+          <div class="book__author">by Matthew Biggs</div>
+          <div class="book__rating">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star half-star"></div>
+            <div class="star empty-star"></div>         
+          </div> 
+        </div>
+        <div class="book">
+          <div class="book__image"></div>
+          <div class="book__title">Jewels of Nizam</div>
+          <div class="book__author">by Matthew Biggs</div>
+          <div class="book__rating">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star half-star"></div>
+            <div class="star empty-star"></div>         
+          </div> 
+        </div>
+        -->
+      </div>
+      <form id="add-book" hidden>
+        <table>
+          <tr>
+            <td><label for="add-book__title">Title: </label></td>
+            <td><input type="text" id="add-book__title" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__author-firstName">Author first name: </label></td>
+            <td><input type="text" id="add-book__author-firstName" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__author-lastName">Author last name: </label></td>
+            <td><input type="text" id="add-book__author-lastName" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__rating">Rating: </label></td>
+            <td><input type="number" id="add-book__rating" class="field" min="0" max="5"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__cost">Cost: </label></td>
+            <td><input type="number" id="add-book__cost" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__image_url">Image URL: </label></td>
+            <td><input type="text" id="add-book__image_url" class="field"></input></td>
+          </tr>
+        </table>
+        <input type="button" id="add-book__submit" value="Ok">
+        <input type="button" id="add-book__cancel" value="Cancel">
+      </form>
+    </div>
+    <div id="footer"></div>
+  </div>
+</body>
+
+</html>

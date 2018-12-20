@@ -1,0 +1,57 @@
+.book {
+    display: inline-block;
+    width: 200px; height: 350px;
+    margin: 10px;
+    font-family: 'Proxima Nova Rg', 'Font Awesome';
+}
+
+.book .book__image{
+    width: 200px;
+    height: 275px;
+    border-radius: 4px;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+}
+
+.book .book__rating {
+    cursor: default;
+}
+
+.star {
+    display: inline-block;
+    -webkit-mask-image: url(Images/Stars/star-solid.svg);
+    mask-image: url(Images/Stars/star-solid.svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: #ffab00;
+    width: 13px; height: 13px;
+}
+.star:hover {
+    cursor: pointer;
+}
+
+.half-star {
+    -webkit-mask-image: url(Images/Stars/star-half-alt-solid.svg);
+    mask-image: url(Images/Stars/star-half-alt-solid.svg);
+}
+
+.empty-star {
+    -webkit-mask-image: url(Images/Stars/star-regular.svg);
+    mask-image: url(Images/Stars/star-regular.svg);
+}
+
+.book__title {
+    font-size: 16px;
+    line-height: 26px;
+    color: #444c63;
+    font-family: "Proxima Nova";
+}
+
+.book__author {
+    font-size: 12px;
+    line-height: 26px;
+    color: #6f7d95;
+    font-family: "Proxima Nova";
+}
