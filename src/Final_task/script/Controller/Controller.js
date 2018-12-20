@@ -6,6 +6,9 @@ booksController.initialize = function () {
     booksModel.loadCategories(booksView.renderCategories, this.onCategoryClick);
     booksView.renderFilters(this.onFilterClick);
     document.getElementById('search').addEventListener('keydown', this.onSearchKeyDown);
+    document.getElementById('add-book-btn').addEventListener('click', this.onAddBookBtnClick);
+    document.getElementById('add-book__submit').addEventListener('click', this.onAddBookSubmit);
+    document.getElementById('add-book__cancel').addEventListener('click', this.onAddBookCancel);
 };
 
 booksController.onFilterClick = function () {
@@ -28,31 +31,22 @@ booksController.onSearchKeyDown = function () {
     }
 }
 
-/*var Controller = function Controller() {
+booksController.onAddBookBtnClick = function () {
+    booksView.hideBooks();
+    booksView.openAddBookForm();
 }
 
-Controller.prototype.constructor = Controller;
-
-Controller.prototype.initialize = function initialize() {
-    console.log(this);
-    booksModel.loadBooks(this.booksView.render, booksModel);
-    booksModel.loadCategories(this.booksView.renderCategories, this, booksModel);
-    this.booksView.renderFilters(this);
-    //this.booksView.renderHistory(booksModel.us());
-};
-
-Controller.prototype.onFilterClick = function onFilterClick() {
-    console.log(window);
-    let filter = this.value;
-    document.controller.booksModel.filterByFilter(filter, window.controller.booksView.render);
+booksController.onAddBookSubmit = function () {
+    booksModel.addBook(booksView.getBookFromForm(), booksView.render);
+    booksView.hideAddBookForm();
+    booksView.openBooks();
 }
 
-Controller.prototype.onCategoryClick = function onCategoryClick() {
-    let elementId = this.id;
-    let category = booksModel.categories.find(function (category) {
-        return 'category#' + category.id == elementId;
-    });
-    let categoryType = category.type;
-    booksModel.filterBooksByCategory(categoryType, this.booksView.render);
+booksController.onAddBookCancel = function () {
+    booksView.hideAddBookForm();
+    booksView.openBooks();
 }
-*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    booksController.initialize();
+}, false);

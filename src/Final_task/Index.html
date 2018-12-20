@@ -8,17 +8,18 @@
   <meta name="keywords" content="Epam external-courses Final_task HTML CSS JS">
   <meta name="author" content="Вилков Денис">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="script/Model/Book.js"></script>
+  <script src="script/Model/Author.js"></script>
   <script src="script/Model/BooksModel.js"></script>
   <script src="script/View/BooksView.js"></script>
   <script src="script/Controller/Controller.js"></script>
-  <script src="script/main-script.js"></script>
 </head>
 
 <body>
   <div id="container">
     <div id="header"></div>
     <div id="sidebar">
-      <input type="button" class="red-btn" value="   ADD A BOOK">
+      <input type="button" id="add-book-btn" class="red-btn" value="   ADD A BOOK">
       <div class="line"></div>
       <input type="button" class="main-nav-btn" value="    Now Reading">
       <input type="button" class="main-nav-btn" value="    Browse">
@@ -104,6 +105,36 @@
         </div>
         -->
       </div>
+      <form id="add-book" hidden>
+        <table>
+          <tr>
+            <td><label for="add-book__title">Title: </label></td>
+            <td><input type="text" id="add-book__title" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__author-firstName">Author first name: </label></td>
+            <td><input type="text" id="add-book__author-firstName" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__author-lastName">Author last name: </label></td>
+            <td><input type="text" id="add-book__author-lastName" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__rating">Rating: </label></td>
+            <td><input type="number" id="add-book__rating" class="field" min="0" max="5"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__cost">Cost: </label></td>
+            <td><input type="number" id="add-book__cost" class="field"></input></td>
+          </tr>
+          <tr>
+            <td><label for="add-book__image_url">Image URL: </label></td>
+            <td><input type="text" id="add-book__image_url" class="field"></input></td>
+          </tr>
+        </table>
+        <input type="button" id="add-book__submit" value="Ok">
+        <input type="button" id="add-book__cancel" value="Cancel">
+      </form>
     </div>
     <div id="footer"></div>
   </div>
