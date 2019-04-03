@@ -1,0 +1,23 @@
+div{
+    margin: 10px;
+}
+.border1{
+    border: 1px solid;
+}
+.border2{
+    border: 5px solid;
+}
+.border3{
+    border: 5px dashed;
+}
+.border4{
+    border: 5px solid red;
+}
+.border5{
+    border: 5px solid;
+    border-radius: 15px;
+}
+.border-img{
+    border: 30px solid;
+    border-image: url(Images/bark.jpg) 30 repeat repeat;
+}
